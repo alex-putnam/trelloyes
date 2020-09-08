@@ -10,9 +10,10 @@ function List(props) {
       </header>
       <div className="List-cards">
         <div>
-          {props.cards.map((card) => (
-            <Card key={card.id} title={card.title} content={card.content} />
-          ))}
+          {props.cards &&
+            props.cards.map((card) => (
+              <Card key={card.id} title={card.title} content={card.content} />
+            ))}
         </div>
         <button type="button" className="List-add-button">
           + Add Random Card
