@@ -19,7 +19,7 @@ class App extends React.Component {
       ...list,
       cardIds: list.cardIds.filter((id) => id !== cardId),
     }));
-    const newCards = omit(this.state.store, cardId);
+    const newCards = omit(this.state.store.allCards, cardId);
     this.setState({
       store: {
         lists: newLists,
